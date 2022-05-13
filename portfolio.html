@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="description" content="A combination of coding and hardware, here is an overview of my past projects and what I'm working on now. I created these for personal projects, hacakthons, and research.">
+
+    <title>Claire Yuan | Projects</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Noto+Sans+Mono&family=Zilla+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--LinkedIn logo-->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        ul a {
+            color: #787D76;
+        }
+        ul a:hover {
+            color: #A3A697;
+        }
+        h4 {
+            font-family: 'Noto Sans Mono', monospace;
+            font-style: italic;
+            color: #826f61;
+        }
+        .row img {
+            border-radius: 1em;
+        }
+        .row .btn {
+            padding: 0.5em;
+        }
+        #details {
+            display: none;
+        }
+        .maroon {
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content" class="load-hidden">
+
+        <div id="navbar" class="reveal">
+            <div id="nav">
+                <a href="homepage.html">Home</a>
+                <a id="active-nav" href="">Projects</a>
+                <a href="about.html">About</a>
+                <a href="resume.pdf" target="_blank">Resume</a>
+            </div> <!--#nav-->
+        </div> <!--#navbar-->
+
+
+        <div id="header">
+            <div id="header-text-div">
+                <h1 class="reveal">Projects</h1>
+                <p class="reveal-2">Here's an overview of my past projects and what I'm working on now!</p>
+            </div> <!--#header-text-div-->
+            <div id="header-img-div">
+                <img src="img/computer.png" class="reveal-2" alt="computer drawing">
+            </div> <!--#header-img-div-->
+        </div> <!--#header-->
+
+
+        <div class="reveal-2">
+            <ul>
+                <li><a href="#mos">MOS Cell Simulator</a></li>
+                <li><a href="#therm">Thermometer Display</a></li>
+                <li><a href="#ww">"WeatherWear"</a></li>
+                <li><a href="#btc">"Better Trojan Check"</a></li>
+            </ul>
+        </div>
+
+
+        <div id="mos" class="row reveal">
+            <h4>IN PROGRESS - Computational Methods for Design and Discovery Lab</h4>
+
+            <div class="flex">
+                <div class="flex-basis-20 left-img">
+                    <img src="img/cmos.png" class="width-100" alt="CMOS circuit">
+                </div> <!--.flex-basis-20-->
+                
+                <div class="flex-text">
+                    <h2 class="reveal-2">MOS Cell Simulator</h2>
+                    <p>My research project consists of using a systematic <strong class="maroon">graph approach</strong> to simulate MOSFET circuits and discover efficient cell configurations. The C++ program first reads a file of transistor netlists and, for each, performs <strong>levelization</strong> on the netlist by assigning each wire to a "level." If levelization is successful, <strong>simulation</strong> is performed through an adjacency list and DFS to determine the truth table.</p>
+                        
+                    <p>In addition, I explored patterns regarding what makes one cell superior to another by comparing circuits that implement the same logic function. The broad goal is to apply this approach to not only MOS transistors but also <strong>new emerging devices</strong> that we don't know as many good designs for.</p>
+                </div> <!--.flex-text-->
+            </div> <!--.flex--> 
+        </div> <!--#mos-->
+
+
+        <div id="therm" class="row reveal">
+            <h4>2022 - EE109 Embedded Systems</h4>
+
+            <div class="flex">
+                <div class="flex-text">
+                    <h2 class="reveal-2">Thermometer Display</h2>
+                    <p>= a dial-type thermometer that indicates the temperature from a local or remote sensor. Data is transmitted through the <strong>1-Wire bus</strong> between a <strong class="maroon">DS18B20 temperature sensor</strong> and Arduino. The temperature is displayed on the LCD screen, and a <strong class="maroon">servo motor</strong> operates with a <strong>PWM signal</strong> to point in the corresponding direction. Pushbuttons allow you to select "local" or "remote." The user can use a <strong class="maroon">rotary encoder</strong> to set a temperature threshold, which is stored in the <strong class="maroon">EEPROM memory</strong>. LEDs and a buzzer indicate if the local temperature is "cool," "warm," or "hot."</p>
+                    <p><strong>SERIAL INTERFACE <span class="maroon">(TX/RX)</span>: </strong>to transmit or receive remote temperature from another Arduino in <strong>@+123#</strong> format. A <strong class="maroon">tri-state buffer</strong> was used to isolate the incoming data for the RX input while the Arduino is being programmed.</p>
+                    <p>★ <em>Coded in <strong>C</strong> with <strong>timers</strong> and <strong>interrupts</strong></em></p>
+                </div> <!--.flex-text-->
+
+                <div class="flex-basis-40 right-img">
+                    <img src="img/thermometer.gif" class="width-100" alt="Arduino and circuit board, with red LED blinking">
+                </div> <!--.flex-basis-20-->
+            </div> <!--.flex-->
+        </div> <!--#therm-->
+
+
+        <div id="ww" class="row reveal">
+            <h4>2022 - AthenaHacks collaborative project</h4>
+
+            <div class="flex">
+                <h2 class="reveal-2">"WeatherWear"</h2>
+                <div class="btn-div reveal-3">
+                    <a href="https://github.com/claire-yuan/claire-yuan.github.io" target="_blank" class="btn">GitHub</a>
+                </div> <!--.btn-div-->
+            </div> <!--.flex-->
+            
+            <p><strong>WeatherWear will help you decide what clothes you want to wear, anywhere.</strong> Given an individual’s current zip code, the web app takes the current temperature from Open Weather API and generates a variety of weather-appropriate outfits for the user to wear. We built the website with <strong class="maroon">HTML, CSS, JavaScript,</strong> and <strong class="maroon">Bootstrap</strong> and used <strong class="maroon">Google Cloud Firebase</strong> to create an outfit database.</p>
+
+            <img src="img/weatherwear.jpg" class="width-100" alt="WeatherWear website screenshot">
+        </div> <!--#ww-->
+
+
+        <div id="btc" class="row reveal">
+            <h4>2022 - HackIOT collaborative project</h4>
+
+            <div class="flex">          
+                <div class="flex-text">
+                    <h2 class="reveal-2">"Better Trojan Check"</h2>
+                    <p>BTC is an <strong>Internet of Things</strong> project exploring a more efficient alternative to USC's COVID compliance system (Trojan Check). Rather than having to pull out your phone and scan a QR code every time you go on campus, this method only requires your finger.</p> 
+                    <p>★ <em>Built with a <strong class="maroon">fingerprint sensor, Arduino Uno, Photon WiFi Board,</strong> and <strong>LED</strong></em></p>
+
+                    <p id="details-show-btn" class="mb-0 reveal-3"><strong class="clickable">→ Details</strong>
+                    <ol id="details" class="mt-0">
+                        <li>Fingerprints are stored in the fingerprint sensor module</li>
+                        <li>When you scan your finger after, the Arduino matches the fingerprint and sends the bits of your ID number to the Photon WiFi board.</li>
+                        <li>Theoretically, the Photon WiFi board would then check the corresponding COVID compliance status in the database.</li>
+                        <li>In our prototype, an LED lights up green when compliant and red when not.</li>
+                    </ol>
+                </div> <!--.flex-text-->
+
+                <div class="flex-basis-20 right-img">
+                    <img src="img/better-tc.jpeg" class="width-100" alt="Better Trojan Check hardware">
+                </div> <!--.flex-basis-20-->
+            </div> <!--.flex-->
+        </div> <!--#btc-->
+
+
+        <div id="footer" class="reveal">
+            <a href="mailto:claireyuan6@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/yuanclaire/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://github.com/claire-yuan/" target="_blank"><i class="fa fa-github"></i></a>
+        </div> <!--#footer-->
+
+    </div> <!--#content-->
+    
+
+
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $('#details-show-btn').click(function() {
+            if ($('#details').css('display') == 'none') {
+                $('#details').slideDown();
+                $('#details-show-btn > .clickable').css('color', '#261B11');
+            }
+            else {
+                $('#details').slideUp();
+                $('#details-show-btn > .clickable').css('color', 'gray');
+            }
+        })
+    </script>
+
+</body>

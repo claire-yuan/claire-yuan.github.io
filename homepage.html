@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Hello, my name is Claire Yuan! I'm an Electrical and Computer Engineering student from San Jose, California. I enjoy coding and hands-on building.">
+
+    <title>Claire Yuan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Noto+Sans+Mono&family=Zilla+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        h1 {
+            font-size: 7em;
+        }
+        #header-text-div {
+            width: 80%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .item {
+            background-color: #ccc6c1;
+            margin: 1em 0;
+            padding: 3em 2em;
+            width: 22%;
+            border-radius: 1em;
+
+            font-size: 0.7em;
+            text-align: center;
+            text-decoration: none;
+        }
+        .item > img {
+            height: 100px;
+            margin: 2em 0;
+            opacity: 0.75;
+        }
+        .item > p {
+            word-wrap: break-word;
+        }
+        .item strong {
+            font-family: 'Zilla Slab', serif;
+            font-size: 2em;
+        }
+        .item img + p {
+            text-decoration: underline;
+        }
+        .item:hover {
+            width: 27%;
+            background-color: #c5bdb8;
+            box-shadow: 5px 5px #261B11;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content" class="load-hidden">
+        <div id="navbar" class="reveal">
+            <div id="nav">
+                <a href="" id="active-nav">Home</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="resume.pdf" target="_blank">Resume</a>
+            </div> <!--#nav-->
+        </div> <!--#navbar-->
+
+
+        <div id="header">
+            <div id="header-text-div">
+                <h1 class="reveal">Claire Yuan</h1>
+                <p class="reveal-2">Hi! I'm an <strong>Electrical and Computer Engineering</strong> student from San Jose, CA. I enjoy coding and hands-on building. </p>
+            </div>
+        </div> <!--#header-->
+
+
+        <div class="row reveal">
+            <h2>Portfolio</h2>
+            <img src="img/computer.png" class="width-20 float-right" alt="computer drawing">
+            <p>I've worked on personal projects, hackathon projects, and research projects. Web apps, hardware projects, and a computer-aided design program—these are all things I loved creating.</p>
+
+            <div class="btn-div reveal-2">
+                <a href="portfolio.html" class="btn">Check out my projects here!</a>
+            </div> <!--.btn-div-->
+        </div> <!--.row-->
+        
+
+        <div class="row reveal">
+            <h2>Links</h2>
+            <div class="container">
+                <a href="mailto:claireyuan6@gmail.com" class="item">
+                    <p><strong>Email</strong></p>
+                    <img src="img/email.png" alt="email icon">
+                    <p>claireyuan6@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/yuanclaire/" target="_blank" class="item reveal-2">
+                    <p><strong>LinkedIn</strong></p>
+                    <img src="img/linkedin.png" alt="LinkedIn logo">
+                    <p>yuanclaire</p>
+                </a>
+                <a href="https://github.com/claire-yuan" target="_blank" class="item reveal-3">
+                    <p><strong>GitHub</strong></p>
+                    <img src="img/github.png" alt="GitHub logo">
+                    <p>claire-yuan</p>
+                </a>
+            </div> <!--.container-->
+        </div> <!--.row-->
+
+    </div> <!--#content-->
+    
+    
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
