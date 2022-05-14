@@ -20,7 +20,7 @@
             margin-bottom: 0.5em;
         }
         .row {
-            background-color: transparent;
+            margin-top: 3em;
         }
         #courses {
             display: none;
@@ -49,28 +49,37 @@
 
         <div id="main" class="reveal-2">
             <div class="flex">
-                <div class="flex-basis-20 left-img">
+                <div class="flex-img-s left-img">
                     <img src="img/me.jpeg" class="circle width-100" alt="photo of myself at graduation">
-                </div> <!--.flex-img-->
-                <div class="flex-basis-100">
+                </div> <!--.flex-img-s-->
+                <div class="flex-text">
                     <p>My name is Claire (she/her), and I'm currently a freshman at the University of Southern California studying Electrical and Computer Engineering. I enjoy coding, creating things digitally, and building things physically. At the same time, I love learning about physics, especially how it relates to electronics and materials. My aspiration is to conduct research on solar, other forms of renewable energy, and computer chips one day. </p>
                     <p>Outside of engineering, I'm passionate about music and working with children. I also run, learn chess, and play the piano for fun.</p>
-                </div> <!--.flex-basis-100-->
+                </div> <!--.flex-text-->
             </div> <!--.flex-->
 
             <div class="row">
-                <h3 id="courses-show-btn" class="mb-0 reveal-3"><span class="clickable">→ Courses I've taken...</span></h3>
+                <h3 id="courses-show-btn" class="mt-0 mb-0 reveal-3"><span class="clickable">→ Courses I've taken...</span></h3>
                 <div id="courses">
-                    <ul class="mt-0">
-                        <li>EE109 Embedded Systems</li>
-                        <li>PHYS171 Applied Physics I: Mechanics</li>
-                        <li>MATH229 Calculus III for Scientists and Engineers</li>
-                        <li>ITP104 Web Publishing</li>
-                        <li>EE141 Applied Linear Algebra</li>
-                        <li>EE155 Intro to Computer Programming for Electrical Engineers</li>
-                        <li>EE105 Intro to Electrical Engineering</li>
-                    </ul>
-                </div>
+                    <div class="flex flex-align-start">
+                        <div>
+                            <ul>
+                                <li>EE109 Embedded Systems</li>
+                                <li>EE141 Applied Linear Algebra</li>
+                                <li>EE155 Intro to Computer Programming for Electrical Engineers</li>
+                                <li>EE105 Intro to Electrical Engineering</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>PHYS171 Applied Physics I: Mechanics</li>
+                                <li>MATH229 Calculus III for Scientists and Engineers</li>
+                                <li>ITP104 Web Publishing</li>
+                            </ul>
+                        </div>
+                    </div> <!--.flex-->
+                    <div class="line"></div>
+                </div> <!--#courses-->
             </div>
 
             <div id="footer" class="reveal">

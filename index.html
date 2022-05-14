@@ -24,13 +24,18 @@
         .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
+            margin: 2em 0;
+        }
+        .btn-div {
+            margin-top: 3em;
         }
         .item {
             background-color: #ccc6c1;
-            margin: 1em 0;
+            margin: 1em 1em;
             padding: 3em 2em;
             width: 22%;
+            max-width: 16em;
             border-radius: 1em;
 
             font-size: 0.7em;
@@ -38,7 +43,8 @@
             text-decoration: none;
         }
         .item > img {
-            height: 100px;
+            max-height: 100px;
+            max-width: 100%;
             margin: 2em 0;
             opacity: 0.75;
         }
@@ -54,6 +60,7 @@
         }
         .item:hover {
             width: 27%;
+            max-width: 19em;
             background-color: #c5bdb8;
             box-shadow: 5px 5px #261B11;
         }
@@ -80,16 +87,16 @@
         </div> <!--#header-->
 
 
-        <div class="row reveal">
+        <div class="row bg-gray reveal">
             <h2>Portfolio</h2>
             <div class="flex">
-                <div class="flex-basis-100">
+                <div class="flex-text">
                     <p>I've worked on personal projects, hackathon projects, and research projects. Web apps, hardware, and a computer-aided design program—these are all things I loved creating.</p>
                     <div class="btn-div reveal-2">
                         <a href="portfolio.html" class="btn">Check out my projects here!</a>
                     </div> <!--.btn-div-->
                 </div>
-                <div class="flex-basis-20 right-img">
+                <div class="flex-img-s right-img">
                     <img src="img/computer.png" class="width-100" alt="computer drawing">
                 </div>
             </div>
@@ -97,7 +104,14 @@
         
 
         <div class="row reveal">
-            <h2>Links</h2>
+            <div class="flex">
+                <div class="line"></div>
+                <div>
+                    <h2 class="text-align-center">Links</h2>
+                </div>
+                <div class="line"></div>
+            </div>
+            
             <div class="container">
                 <a href="mailto:claireyuan6@gmail.com" class="item">
                     <p><strong>Email</strong></p>

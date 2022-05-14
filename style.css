@@ -14,6 +14,8 @@ body {
     width: 80%;
     margin: 3rem auto 5rem auto;
 }
+
+/* NAV */
 #navbar {
     text-align: right;
 }
@@ -42,6 +44,8 @@ a {
 #active-nav a {
     color: #787D76;
 }
+
+/* HEADER */
 #header {
     display: flex;
     flex-wrap: wrap;
@@ -73,25 +77,30 @@ h1 {
 #header p {
     font-size: 1.4em;
 }
+
+/* OTHER HEADINGS */
 h2 {
     font-family: 'Zilla Slab', serif;
     color: #787D76;
-    font-size: 3em;
-    margin: 0.3em 1em 0 0;
+    font-size: 4rem;
+    margin: 0.3em 0;
     text-shadow: 3px 3px #ddd;
 }
 h3 {
     font-style: italic;
     text-transform: uppercase;
 }
+
+/* CONTENT ROWS */
 .row {
-    background-color: #f1f1f1;
     margin: 5rem 0 3em 0;
     padding: 4rem 4rem;
 }
-.btn-div {
-    padding: 1.5em 1em 0 0;
+.bg-gray {
+    background-color: #f1f1f1;
 }
+
+/* BUTTONS */
 .btn {
     padding: 0.8rem;
     border-radius: 1.2rem;
@@ -107,6 +116,17 @@ h3 {
 .btn-div a {
     transition: all 300ms;
 }
+
+/* LINE/DIVIDER */
+.line {
+    flex-grow:1;
+    height: 2px;
+    background-color: #787D76;
+    margin: 0 2em;
+}
+
+
+/* FOOTER */
 #footer {
     text-align: center;
     font-size: 2rem;
@@ -123,6 +143,8 @@ h3 {
     margin: 0 0.3em;
     font-size: 1.2em;
 }
+
+/* SHOW MORE/LESS */
 .clickable {
     font-family: 'Noto Sans Mono', monospace;
     color: #826f61;
@@ -141,29 +163,44 @@ h3 {
     background-color: #826f61;
 }
 
-
-/* General styling */
+/* FLEXBOX */
 .flex {
-    display: flex;
+    display: flex;  
+    flex-wrap: wrap;
     align-items: center;
 }
-.flex-basis-20 {
-    flex-basis: 20%;
+.flex-align-start {
+    align-items: flex-start;
 }
-.flex-basis-40 {
-    flex-basis: 40%;
+
+/* for flex containers with text and image*/
+.flex-img-s {
+    flex: 1 0 20%;
 }
-.flex-basis-100 {
-    flex-basis: 100%;
+.flex-img-m {
+    flex: 1 0 30%;
+}
+.flex-text {
+    flex: 9999 1 50%;
 }
 .left-img {
-    margin-right: 7%;
+    margin-right: 5%;
 }
 .right-img {
-    margin-left: 7%;
+    margin-left: 5%;
 }
+.bottom-img {
+    margin-top: 5%;
+}
+
+/* GENERAL STYLING */
 .width-20 {
     width: 20%;
+    height: auto;
+}
+.width-80 {
+    width: 80%;
+    height: auto;
 }
 .width-100 {
     width: 100%;
@@ -173,14 +210,19 @@ h3 {
     height: 100%;
     width: auto;
 }
-/* margin-top */
 .mt-0 {
     margin-top: 0;
 }
-/* margin-bottom */
 .mb-0 {
     margin-bottom: 0;
 }
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
 .circle {
     border-radius: 50%;
+}
+.text-align-center {
+    text-align: center;
 }

@@ -28,8 +28,17 @@
             font-style: italic;
             color: #826f61;
         }
+        .btn-div {
+            margin-top: 0.5em;
+            margin-left: 3em;
+        }
+
         .row img {
             border-radius: 1rem;
+            transition: all 300ms;
+        }
+        .row img:hover {
+            transform: scale(1.2);
         }
         .row .btn {
             padding: 0.5rem;
@@ -77,43 +86,46 @@
         </div>
 
 
-        <div id="mos" class="row reveal">
+        <div id="mos" class="row bg-gray reveal">
             <h4>IN PROGRESS - Computational Methods for Design and Discovery Lab</h4>
 
             <div class="flex">
-                <div class="flex-basis-20 left-img">
+                <div class="flex-img-s left-img">
                     <img src="img/cmos.png" class="width-100" alt="CMOS circuit">
-                </div> <!--.flex-basis-20-->
+                </div> <!--.flex-img-s-->
                 
-                <div class="flex-basis-100">
+                <div class="flex-text">
                     <h2 class="reveal-2">MOS Cell Simulator</h2>
                     <p>My research project consists of using a systematic <strong class="maroon">graph approach</strong> to simulate MOSFET circuits and discover efficient cell configurations. The C++ program first reads a file of transistor netlists and, for each, performs <strong>levelization</strong> on the netlist to determine the order in which to simulate the wires. If levelization is successful, <strong>simulation</strong> is performed through an <strong class="maroon">adjacency list</strong> and <strong class="maroon">Depth First Search</strong> to determine the truth table.</p>
                         
                     <p>In addition, I explored patterns regarding what makes one cell superior to another by comparing circuits that implement the same logic function. The broad goal is to apply this approach to not only MOS transistors but also <strong>new emerging devices</strong> that we don't know as many good designs for.</p>
-                </div> <!--.flex-basis-100-->
+                </div> <!--.flex-text-->
             </div> <!--.flex--> 
         </div> <!--#mos-->
 
 
-        <div id="therm" class="row reveal">
+        <div id="therm" class="row bg-gray reveal">
             <h4>2022 - EE109 Embedded Systems</h4>
 
             <div class="flex">
-                <div class="flex-basis-100">
+                <div class="flex-text">
                     <h2 class="reveal-2">Thermometer Display</h2>
                     <p>= a dial-type thermometer that indicates the temperature from a local or remote sensor. Data is transmitted through the <strong>1-Wire bus</strong> between a <strong class="maroon">DS18B20 temperature sensor</strong> and Arduino. The temperature is displayed on the LCD screen, and a <strong class="maroon">servo motor</strong> operates with a <strong>PWM signal</strong> to point in the corresponding direction. Pushbuttons allow you to select "local" or "remote." The user can use a <strong class="maroon">rotary encoder</strong> to set a temperature threshold, which is stored in the <strong class="maroon">EEPROM memory</strong>. LEDs and a buzzer indicate if the local temperature is "cool," "warm," or "hot."</p>
-                    <p><strong>SERIAL INTERFACE <span class="maroon">(TX/RX)</span>: </strong>to transmit or receive remote temperature from another Arduino in <strong>@+123#</strong> format. A <strong class="maroon">tri-state buffer</strong> was used to isolate the incoming data for the RX input while the Arduino is being programmed.</p>
-                    <p>★ <em>Coded in <strong>C</strong> with <strong>timers</strong> and <strong>interrupts</strong></em></p>
-                </div> <!--.flex-basis-100-->
+                </div> <!--.flex-text-->
 
-                <div class="flex-basis-40 right-img">
+                <div class="flex-img-m right-img">
                     <img src="img/thermometer.gif" class="width-100" alt="Arduino and circuit board, with red LED blinking">
-                </div> <!--.flex-basis-20-->
+                </div> <!--.flex-img-m-->
             </div> <!--.flex-->
+
+            <div>
+                <p><strong>SERIAL INTERFACE <span class="maroon">(TX/RX)</span>: </strong>to transmit or receive remote temperature data from another Arduino in <strong>@+123#</strong> format. A <strong class="maroon">tri-state buffer</strong> was used to isolate the incoming data for the RX input while the Arduino is being programmed.</p>
+                <p>★ <em>Coded in <strong>C</strong> with <strong>timers</strong> and <strong>interrupts</strong></em></p>
+            </div>
         </div> <!--#therm-->
 
 
-        <div id="ww" class="row reveal">
+        <div id="ww" class="row bg-gray reveal">
             <h4>2022 - AthenaHacks collaborative project</h4>
 
             <div class="flex">
@@ -124,36 +136,37 @@
             </div> <!--.flex-->
             
             <div>
-                <p><strong>WeatherWear will help you decide what clothes you want to wear, anywhere.</strong> Given an individual’s current zip code, the web app takes the current temperature from Open Weather API and generates a variety of weather-appropriate outfits for the user to wear. We built the website with <strong class="maroon">HTML, CSS, JavaScript,</strong> and <strong class="maroon">Bootstrap</strong> and used <strong class="maroon">Google Cloud Firebase</strong> to create an outfit database.</p>
+                <p>WeatherWear will help you decide what clothes you want to wear, anywhere. Given an individual’s current zip code, the web app takes the current temperature from <strong class="maroon">Open Weather API</strong> and generates a variety of weather-appropriate outfits for the user to wear. We built the website with <strong>HTML, CSS, JavaScript,</strong> and <strong>Bootstrap</strong> and used <strong class="maroon">Google Cloud Firebase</strong> to create an outfit database.</p>
             </div>
-            <div>
+            <div class="width-80 mx-auto bottom-img">
                 <img src="img/weatherwear.jpg" class="width-100" alt="WeatherWear website screenshot">
             </div>
         </div> <!--#ww-->
 
 
-        <div id="btc" class="row reveal">
+        <div id="btc" class="row bg-gray reveal">
             <h4>2022 - HackIOT collaborative project</h4>
 
             <div class="flex">          
-                <div class="flex-basis-100">
+                <div class="flex-text">
                     <h2 class="reveal-2">"Better Trojan Check"</h2>
                     <p>BTC is an <strong>Internet of Things</strong> project exploring a more efficient alternative to USC's COVID compliance system (Trojan Check). Rather than having to pull out your phone and scan a QR code every time you go on campus, this method only requires your finger.</p> 
                     <p>★ <em>Built with a <strong class="maroon">fingerprint sensor, Arduino Uno, Photon WiFi Board,</strong> and <strong>LED</strong></em></p>
 
-                    <p id="details-show-btn" class="mb-0 reveal-3"><strong class="clickable">→ Details...</strong>
-                    <ol id="details" class="mt-0">
-                        <li>Fingerprints are stored in the fingerprint sensor module</li>
-                        <li>When you scan your finger after, the Arduino matches the fingerprint and sends the bits of your ID number to the Photon WiFi board.</li>
-                        <li>Theoretically, the Photon WiFi board would then check the corresponding COVID compliance status in the database.</li>
-                        <li>In our prototype, an LED lights up green when compliant and red when not.</li>
-                    </ol>
-                </div> <!--.flex-basis-100-->
+                </div> <!--.flex-text-->
 
-                <div class="flex-basis-20 right-img">
+                <div class="flex-img-s right-img">
                     <img src="img/better-tc.jpeg" class="width-100" alt="Better Trojan Check hardware">
-                </div> <!--.flex-basis-20-->
+                </div> <!--.flex-img-s-->
             </div> <!--.flex-->
+
+            <p id="details-show-btn" class="mb-0 reveal-3"><strong class="clickable">→ Details...</strong>
+            <ol id="details" class="mt-0">
+                <li>Fingerprints are stored in the fingerprint sensor module</li>
+                <li>When you scan your finger after, the Arduino matches the fingerprint and sends the bits of your ID number to the Photon WiFi board.</li>
+                <li>Theoretically, the Photon WiFi board would then check the corresponding COVID compliance status in the database.</li>
+                <li>In our prototype, an LED lights up green when compliant and red when not.</li>
+            </ol>
         </div> <!--#btc-->
 
 
