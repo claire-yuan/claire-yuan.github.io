@@ -19,6 +19,9 @@
         h1 {
             margin-bottom: 0.5em;
         }
+        .row {
+            background-color: transparent;
+        }
         #courses {
             display: none;
         }
@@ -30,7 +33,7 @@
         <div id="navbar" class="reveal">
             <div id="nav">
                 <a href="index.html">Home</a>
-                <a href="portfolio.html">Projects</a>
+                <a href="portfolio.html">Portfolio</a>
                 <a id="active-nav" href="">About</a>
                 <a href="resume.pdf" target="_blank">Resume</a>
             </div> <!--#nav-->
@@ -49,22 +52,23 @@
                 <div class="flex-basis-20 left-img">
                     <img src="img/me.jpeg" class="circle width-100" alt="photo of myself at graduation">
                 </div> <!--.flex-img-->
-                <div class="flex-text">
+                <div class="flex-basis-100">
                     <p>My name is Claire (she/her), and I'm currently a freshman at the University of Southern California studying Electrical and Computer Engineering. I enjoy coding, creating things digitally, and building things physically. At the same time, I love learning about physics, especially how it relates to electronics and materials. My aspiration is to conduct research on solar, other forms of renewable energy, and computer chips one day. </p>
                     <p>Outside of engineering, I'm passionate about music and working with children. I also run, learn chess, and play the piano for fun.</p>
-                </div> <!--.flex-text-->
+                </div> <!--.flex-basis-100-->
             </div> <!--.flex-->
 
-            <div>
-                <h3 id="courses-show-btn" class="mb-0 reveal-3"><span class="clickable">→ Courses I've taken</span></h3>
+            <div class="row">
+                <h3 id="courses-show-btn" class="mb-0 reveal-3"><span class="clickable">→ Courses I've taken...</span></h3>
                 <div id="courses">
                     <ul class="mt-0">
-                        <li>Embedded Systems</li>
-                        <li>Applied Physics I: Mechanics</li>
-                        <li>Calculus III for Scientists and Engineers</li>
-                        <li>Web Publishing</li>
-                        <li>Applied Linear Algebra</li>
-                        <li>Intro to Computer Programming for Electrical Engineers</li>
+                        <li>EE109 Embedded Systems</li>
+                        <li>PHYS171 Applied Physics I: Mechanics</li>
+                        <li>MATH229 Calculus III for Scientists and Engineers</li>
+                        <li>ITP104 Web Publishing</li>
+                        <li>EE141 Applied Linear Algebra</li>
+                        <li>EE155 Intro to Computer Programming for Electrical Engineers</li>
+                        <li>EE105 Intro to Electrical Engineering</li>
                     </ul>
                 </div>
             </div>
@@ -87,11 +91,11 @@
         $('#courses-show-btn').click(function() {
             if ($('#courses').css('display') == 'none') {
                 $('#courses').slideDown();
-                $('#courses-show-btn > .clickable').css('color', '#261B11');
+                $('#courses-show-btn > .clickable').addClass('clicked');
             }
             else {
                 $('#courses').slideUp();
-                $('#courses-show-btn > .clickable').css('color', 'gray');
+                $('#courses-show-btn > .clickable').removeClass('clicked');
             }
         })
             

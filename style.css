@@ -7,12 +7,12 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins', Verdana, sans-serif;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #261B11;
 }
 #content {
     width: 80%;
-    margin: 3em auto 5em auto;
+    margin: 3rem auto 5rem auto;
 }
 #navbar {
     text-align: right;
@@ -29,7 +29,7 @@ a {
     transition: all 300ms;
 }
 #nav a {
-    padding: 1em 2em;
+    padding: 1rem 2rem;
     color: #787D76;
 }
 #nav a:hover {
@@ -67,7 +67,7 @@ a {
 }
 h1 {
     margin-top: 0;
-    font-size: 5em;
+    font-size: 7rem;
     color: #826f61;
 }
 #header p {
@@ -86,15 +86,15 @@ h3 {
 }
 .row {
     background-color: #f1f1f1;
-    margin: 5em 0 3em 0;
-    padding: 2em 3em;
+    margin: 5rem 0 3em 0;
+    padding: 4rem 4rem;
 }
 .btn-div {
-    padding: 2em 0;
+    padding: 1.5em 1em 0 0;
 }
 .btn {
-    padding: 0.8em;
-    border-radius: 1em;
+    padding: 0.8rem;
+    border-radius: 1.2rem;
     box-shadow: 2px 2px gray;
     background-color: #c5bdb8;
     border: 2px solid #261B11;
@@ -109,12 +109,12 @@ h3 {
 }
 #footer {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2rem;
     padding: 1em;
     margin-top: 2em;
 }
 #footer i {
-    color: #826f61a0;
+    color: #b1a59c;
     margin: 0 0.3em;
     transition: all 300ms ease-out;
 }
@@ -125,12 +125,20 @@ h3 {
 }
 .clickable {
     font-family: 'Noto Sans Mono', monospace;
-    color: gray;
+    color: #826f61;
     transition: all 500ms;
 }
 .clickable:hover {
-    color: #261B11;
+    background-color: #b1a59c;
+    color: white;
     cursor: pointer;
+}
+.clicked {
+    background-color: #826f61;
+    color: white;
+}
+.clicked:hover {
+    background-color: #826f61;
 }
 
 
@@ -145,7 +153,7 @@ h3 {
 .flex-basis-40 {
     flex-basis: 40%;
 }
-.flex-text {
+.flex-basis-100 {
     flex-basis: 100%;
 }
 .left-img {
@@ -172,16 +180,6 @@ h3 {
 /* margin-bottom */
 .mb-0 {
     margin-bottom: 0;
-}
-.float-right {
-    float: right;
-    margin-left: 2em;
-    margin-bottom: 1em;
-}
-.float-left {
-    float: left;
-    margin-right: 2em;
-    margin-bottom: 1em;
 }
 .circle {
     border-radius: 50%;

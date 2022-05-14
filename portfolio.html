@@ -20,7 +20,8 @@
             color: #787D76;
         }
         ul a:hover {
-            color: #A3A697;
+            background-color: #A3A697;
+            color: white;
         }
         h4 {
             font-family: 'Noto Sans Mono', monospace;
@@ -28,10 +29,10 @@
             color: #826f61;
         }
         .row img {
-            border-radius: 1em;
+            border-radius: 1rem;
         }
         .row .btn {
-            padding: 0.5em;
+            padding: 0.5rem;
         }
         #details {
             display: none;
@@ -48,7 +49,7 @@
         <div id="navbar" class="reveal">
             <div id="nav">
                 <a href="index.html">Home</a>
-                <a id="active-nav" href="">Projects</a>
+                <a id="active-nav" href="">Portfolio</a>
                 <a href="about.html">About</a>
                 <a href="resume.pdf" target="_blank">Resume</a>
             </div> <!--#nav-->
@@ -57,7 +58,7 @@
 
         <div id="header">
             <div id="header-text-div">
-                <h1 class="reveal">Projects</h1>
+                <h1 class="reveal">Portfolio</h1>
                 <p class="reveal-2">Here's an overview of my past projects and what I'm working on now!</p>
             </div> <!--#header-text-div-->
             <div id="header-img-div">
@@ -84,12 +85,12 @@
                     <img src="img/cmos.png" class="width-100" alt="CMOS circuit">
                 </div> <!--.flex-basis-20-->
                 
-                <div class="flex-text">
+                <div class="flex-basis-100">
                     <h2 class="reveal-2">MOS Cell Simulator</h2>
                     <p>My research project consists of using a systematic <strong class="maroon">graph approach</strong> to simulate MOSFET circuits and discover efficient cell configurations. The C++ program first reads a file of transistor netlists and, for each, performs <strong>levelization</strong> on the netlist to determine the order in which to simulate the wires. If levelization is successful, <strong>simulation</strong> is performed through an <strong class="maroon">adjacency list</strong> and <strong class="maroon">Depth First Search</strong> to determine the truth table.</p>
                         
                     <p>In addition, I explored patterns regarding what makes one cell superior to another by comparing circuits that implement the same logic function. The broad goal is to apply this approach to not only MOS transistors but also <strong>new emerging devices</strong> that we don't know as many good designs for.</p>
-                </div> <!--.flex-text-->
+                </div> <!--.flex-basis-100-->
             </div> <!--.flex--> 
         </div> <!--#mos-->
 
@@ -98,12 +99,12 @@
             <h4>2022 - EE109 Embedded Systems</h4>
 
             <div class="flex">
-                <div class="flex-text">
+                <div class="flex-basis-100">
                     <h2 class="reveal-2">Thermometer Display</h2>
                     <p>= a dial-type thermometer that indicates the temperature from a local or remote sensor. Data is transmitted through the <strong>1-Wire bus</strong> between a <strong class="maroon">DS18B20 temperature sensor</strong> and Arduino. The temperature is displayed on the LCD screen, and a <strong class="maroon">servo motor</strong> operates with a <strong>PWM signal</strong> to point in the corresponding direction. Pushbuttons allow you to select "local" or "remote." The user can use a <strong class="maroon">rotary encoder</strong> to set a temperature threshold, which is stored in the <strong class="maroon">EEPROM memory</strong>. LEDs and a buzzer indicate if the local temperature is "cool," "warm," or "hot."</p>
                     <p><strong>SERIAL INTERFACE <span class="maroon">(TX/RX)</span>: </strong>to transmit or receive remote temperature from another Arduino in <strong>@+123#</strong> format. A <strong class="maroon">tri-state buffer</strong> was used to isolate the incoming data for the RX input while the Arduino is being programmed.</p>
                     <p>★ <em>Coded in <strong>C</strong> with <strong>timers</strong> and <strong>interrupts</strong></em></p>
-                </div> <!--.flex-text-->
+                </div> <!--.flex-basis-100-->
 
                 <div class="flex-basis-40 right-img">
                     <img src="img/thermometer.gif" class="width-100" alt="Arduino and circuit board, with red LED blinking">
@@ -122,9 +123,12 @@
                 </div> <!--.btn-div-->
             </div> <!--.flex-->
             
-            <p><strong>WeatherWear will help you decide what clothes you want to wear, anywhere.</strong> Given an individual’s current zip code, the web app takes the current temperature from Open Weather API and generates a variety of weather-appropriate outfits for the user to wear. We built the website with <strong class="maroon">HTML, CSS, JavaScript,</strong> and <strong class="maroon">Bootstrap</strong> and used <strong class="maroon">Google Cloud Firebase</strong> to create an outfit database.</p>
-
-            <img src="img/weatherwear.jpg" class="width-100" alt="WeatherWear website screenshot">
+            <div>
+                <p><strong>WeatherWear will help you decide what clothes you want to wear, anywhere.</strong> Given an individual’s current zip code, the web app takes the current temperature from Open Weather API and generates a variety of weather-appropriate outfits for the user to wear. We built the website with <strong class="maroon">HTML, CSS, JavaScript,</strong> and <strong class="maroon">Bootstrap</strong> and used <strong class="maroon">Google Cloud Firebase</strong> to create an outfit database.</p>
+            </div>
+            <div>
+                <img src="img/weatherwear.jpg" class="width-100" alt="WeatherWear website screenshot">
+            </div>
         </div> <!--#ww-->
 
 
@@ -132,19 +136,19 @@
             <h4>2022 - HackIOT collaborative project</h4>
 
             <div class="flex">          
-                <div class="flex-text">
+                <div class="flex-basis-100">
                     <h2 class="reveal-2">"Better Trojan Check"</h2>
                     <p>BTC is an <strong>Internet of Things</strong> project exploring a more efficient alternative to USC's COVID compliance system (Trojan Check). Rather than having to pull out your phone and scan a QR code every time you go on campus, this method only requires your finger.</p> 
                     <p>★ <em>Built with a <strong class="maroon">fingerprint sensor, Arduino Uno, Photon WiFi Board,</strong> and <strong>LED</strong></em></p>
 
-                    <p id="details-show-btn" class="mb-0 reveal-3"><strong class="clickable">→ Details</strong>
+                    <p id="details-show-btn" class="mb-0 reveal-3"><strong class="clickable">→ Details...</strong>
                     <ol id="details" class="mt-0">
                         <li>Fingerprints are stored in the fingerprint sensor module</li>
                         <li>When you scan your finger after, the Arduino matches the fingerprint and sends the bits of your ID number to the Photon WiFi board.</li>
                         <li>Theoretically, the Photon WiFi board would then check the corresponding COVID compliance status in the database.</li>
                         <li>In our prototype, an LED lights up green when compliant and red when not.</li>
                     </ol>
-                </div> <!--.flex-text-->
+                </div> <!--.flex-basis-100-->
 
                 <div class="flex-basis-20 right-img">
                     <img src="img/better-tc.jpeg" class="width-100" alt="Better Trojan Check hardware">
@@ -170,11 +174,11 @@
         $('#details-show-btn').click(function() {
             if ($('#details').css('display') == 'none') {
                 $('#details').slideDown();
-                $('#details-show-btn > .clickable').css('color', '#261B11');
+                $('#details-show-btn > .clickable').addClass('clicked');
             }
             else {
                 $('#details').slideUp();
-                $('#details-show-btn > .clickable').css('color', 'gray');
+                $('#details-show-btn > .clickable').removeClass('clicked');
             }
         })
     </script>
