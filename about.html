@@ -25,6 +25,9 @@
         #courses {
             display: none;
         }
+        .flex > .column {
+            flex: 1 0 50%;
+        }
     </style>
 </head>
 
@@ -62,7 +65,7 @@
                 <h3 id="courses-show-btn" class="mt-0 mb-0 reveal-3"><span class="clickable">→ Courses I've taken...</span></h3>
                 <div id="courses">
                     <div class="flex flex-align-start">
-                        <div>
+                        <div class="column">
                             <ul>
                                 <li>EE109 Embedded Systems</li>
                                 <li>EE141 Applied Linear Algebra</li>
@@ -70,7 +73,7 @@
                                 <li>EE105 Intro to Electrical Engineering</li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="column">
                             <ul>
                                 <li>PHYS171 Applied Physics I: Mechanics</li>
                                 <li>MATH229 Calculus III for Scientists and Engineers</li>
