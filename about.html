@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta name="description" content="My name is Claire Yuan and I study Electrical and Computer Engineering at the University of Southern California.">
 
@@ -10,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Noto+Sans+Mono&family=Zilla+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--LinkedIn logo-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--icons-->
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -28,12 +29,21 @@
         .flex > .column {
             flex: 1 0 50%;
         }
+
+        @media(max-width: 991px) {
+            #main > .flex {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div id="content" class="load-hidden">
         <div id="navbar" class="reveal">
+            <div id="navbar-btn" class="clickable">
+                <i class="fa fa-bars"></i>
+            </div> <!--#navbar-btn-->
             <div id="nav">
                 <a href="index.html">Home</a>
                 <a href="portfolio.html">Portfolio</a>
