@@ -21,7 +21,7 @@
             margin-bottom: 0.5em;
         }
         .row {
-            margin-top: 3em;
+            margin-top: 2em;
         }
         #courses {
             display: none;
@@ -30,9 +30,16 @@
             flex: 1 0 50%;
         }
 
-        @media(max-width: 991px) {
-            #main > .flex {
+        @media(max-width: 1000px) {
+            #main .flex {
                 flex-direction: column;
+            }
+            .flex-img-s {
+                max-width: 300px;
+            }
+            .row {
+                margin: 1rem 0;
+                padding: 1rem;
             }
         }
     </style>
@@ -67,7 +74,6 @@
                 </div> <!--.flex-img-s-->
                 <div class="flex-text">
                     <p>My name is Claire (she/her), and I'm currently a freshman at the University of Southern California studying Electrical and Computer Engineering. I enjoy coding, creating things digitally, and building things physically. At the same time, I love learning about physics, especially how it relates to electronics and materials. My aspiration is to conduct research on solar, other forms of renewable energy, and computer chips one day. </p>
-                    <p>Outside of engineering, I'm passionate about music and working with children. I also run, learn chess, and play the piano for fun.</p>
                 </div> <!--.flex-text-->
             </div> <!--.flex-->
 
